@@ -16,7 +16,7 @@ on:
     types: published
   push:
     branches:
-      - main
+      - x86
     paths:
       - 'x86.config'
 #  schedule:
