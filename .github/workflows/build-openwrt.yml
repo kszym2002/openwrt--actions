@@ -18,7 +18,8 @@ on:
     branches:
       - main
     paths:
-      - '.config'
+      - 'x86.config'
+      - 'new3.config'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -28,7 +29,8 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config
+  CONFIG_FILE: x86.config
+  CONFIG_FILE: new3.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: true
@@ -42,12 +44,6 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
- 
-    name: Build ${{matrix.target}}
-    strategy:
-      fail-fast: false
-      matrix:
-        target: [new3,x86_64]
         
     steps:
     - name: Checkout
