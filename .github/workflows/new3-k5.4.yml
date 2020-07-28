@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: new3 openwrt
+name: new3 openwrt 5.4
 
 on:
   repository_dispatch:
