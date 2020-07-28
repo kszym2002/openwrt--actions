@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: x86 openwrt
+name: x86 openwrt 5.4
 
 on:
   repository_dispatch:
